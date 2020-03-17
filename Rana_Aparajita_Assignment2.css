@@ -1,0 +1,128 @@
+/* Put your solutions to the assignment here */
+body {
+    background-color: #eee;
+}
+
+header{
+    background-color: #49516f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1, span{
+    margin: 0px;
+    color:white;
+}
+
+.logo{
+    margin: 10px;
+    padding: 5px;
+    height: 100px;
+    width: 100;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.post {
+    display: flex;
+    flex: inherit;
+}
+
+.post-body{
+    height: 200px;
+}
+
+.post-container{
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.post-pic{
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* PHONE */
+@media only screen and (max-width: 399px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        border-radius: 50%;
+    }
+    
+    .posts{
+        flex-basis: auto;
+        flex-direction: column;
+    }
+    
+    .post-container{
+        flex-direction: column;
+    }
+    .post-pic{
+        height: auto;
+        width: 100%;
+    }
+} 
+
+/* TABLET */
+@media only screen and (min-width: 400px) and (max-width: 998px) {
+    header{
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .posts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .post-container{
+        display:flex;
+        flex-direction: column;
+    }
+    .post{
+        flex: 50%;
+    }
+    .post-pic{
+        width: 100%;
+        height: auto;
+    }
+} 
+
+/* DESKTOP */
+@media only screen and (min-width: 999px) {
+    .posts{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .post{
+        max-width: 800px;
+        flex-grow: inherit;
+        align-self: center;
+        display: flex;
+    }
+    .post-pic{
+        width: 200;
+        height: 200;
+    }
+}
